@@ -14,8 +14,4 @@
 
 <h4>Brain even</h4>
 
-<<<<<<< HEAD
-<a href="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj" target="_blank"><img src="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj.svg" /></a>
-=======
 <script id="asciicast-3jxxTHScPlCDIixGiPSL9YzDj" src="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj.js" async></script>
->>>>>>> b117878 (fix <a> tag)
