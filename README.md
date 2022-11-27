@@ -14,4 +14,4 @@
 
 <h4>Brain even</h4>
 
-<a href="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj"><img src="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj.svg"</a>
+<a href="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj" target="_blank"><img src="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj.svg" /></a>
