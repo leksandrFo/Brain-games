@@ -1,7 +1,5 @@
-const generateRandomNumber = () => {
-  const multiplier = [10, 100];
-  const randomMultiplier = multiplier[Math.floor(Math.random() * multiplier.length)];
-  return Math.round(Math.random() * randomMultiplier);
+const generateRandomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min) + min);
 };
 
 export default generateRandomNumber;
