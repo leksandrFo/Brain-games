@@ -7,7 +7,11 @@
         <h3>Brain-even</h3>
         <p>In the game "Brain-even" you need to answer whether a given number is even or odd.
         If your answer is correct, the program will answer "Correct!", if the answer is "empty" or contains an error the program will give the correct answer and will be finished. In case you successfully answer three times, the program will congratulate you and will be closed.</p>
-    </li>the program will answer correctly
+    </li>
+    <li>
+        <h3>Brain-calc</h3>
+        <p>In the game "Brain-calc" you should correctly calculate the result of the proposed mathematical expression.</p>
+    </li>
   </ul>
 
 <h3>Games demonstreation.</h3>
