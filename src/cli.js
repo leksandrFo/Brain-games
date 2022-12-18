@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
-let player = '';
+const player = {};
 
 const playerName = () => {
-  player = readlineSync.question('May I have your name? ');
-  while (player === '') {
-    player = readlineSync.question('Excuse me, could you tell me your name again? ');
+  player.name = readlineSync.question('May I have your name? ');
+  while (player.name === '') {
+    player.name = readlineSync.question('Excuse me, could you tell me your name again? ');
   }
-  console.log(`Hello, ${player}!`);
+  console.log(`Hello, ${player.name}!`);
 };
 
 export { playerName, player };
