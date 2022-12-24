@@ -2,15 +2,23 @@
 [![Actions Status](https://github.com/leksandrFo/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/leksandrFo/frontend-project-44/actions)  <a href="https://codeclimate.com/github/leksandrFo/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/b68a70a881d0a8ff7bd5/maintainability" /></a>
 
 <h2>Project "Brain games"</h2>
+<p>"Brain games" - it's a collection of mini-games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
   <ul>
     <li>
         <h3>Brain-even</h3>
-        <p>In the game "Brain-even" you need to answer whether a given number is even or odd.
-        If your answer is correct, the program will answer "Correct!", if the answer is "empty" or contains an error the program will give the correct answer and will be finished. In case you successfully answer three times, the program will congratulate you and will be closed.</p>
+        <p>In the game "Brain-even" you should answer whether a given number is even or odd.</p>
     </li>
     <li>
         <h3>Brain-calc</h3>
         <p>In the game "Brain-calc" you should correctly calculate the result of the proposed mathematical expression.</p>
+    </li>
+    <li>
+        <h3>Brain-gcd</h3>
+        <p>In the game "Brain-gcd" you should find the greatest common divisor of the given two numbers.</p>
+    </li>
+    <li>
+        <h3>Brain-progression</h3>
+        <p>In the game "Brain-progression" you should insert the missing number into given arithmetic progression.</p>
     </li>
   </ul>
 
