@@ -3,6 +3,8 @@
 
 <h2>Project "Brain games"</h2>
 
+<p>"Brain games" - it's a collection of five console games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
+
 ## Installation:
 ```
 git clone git@github.com:leksandrFo/frontend-project-44.git
@@ -18,7 +20,6 @@ npm link
 `brain-prime`
 
 ## Description:
-<p>"Brain games" - it's a collection of five console games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
   <ul>
     <li>
         <h3>Brain-even</h3>
