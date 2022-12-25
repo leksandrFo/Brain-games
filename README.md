@@ -26,8 +26,24 @@
     </li>
   </ul>
 
-<h3>Games demonstreation.</h3>
+<h3>Game's demonstration.</h3>
 
-<h4>Brain even</h4>
+<h4>Brain-even</h4>
 
-<a href="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj" target="_blank"><img src="https://asciinema.org/a/3jxxTHScPlCDIixGiPSL9YzDj.svg" /></a>
+<a href="https://asciinema.org/a/547817" target="_blank"><img src="https://asciinema.org/a/547817.svg" /></a>
+
+<h4>Brain-calc</h4>
+
+<a href="https://asciinema.org/a/547823" target="_blank"><img src="https://asciinema.org/a/547823.svg" /></a>
+
+<h4>Brain-gcd</h4>
+
+<a href="https://asciinema.org/a/547829" target="_blank"><img src="https://asciinema.org/a/547829.svg" /></a>
+
+<h4>Brain-gcd</h4>
+
+<a href="https://asciinema.org/a/547830" target="_blank"><img src="https://asciinema.org/a/547830.svg" /></a>
+
+<h4>Brain-gcd</h4>
+
+<a href="https://asciinema.org/a/547831" target="_blank"><img src="https://asciinema.org/a/547831.svg" /></a>
