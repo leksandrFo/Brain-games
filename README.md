@@ -2,7 +2,23 @@
 [![Actions Status](https://github.com/leksandrFo/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/leksandrFo/frontend-project-44/actions)  <a href="https://codeclimate.com/github/leksandrFo/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/b68a70a881d0a8ff7bd5/maintainability" /></a>
 
 <h2>Project "Brain games"</h2>
-<p>"Brain games" - it's a collection of mini-games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
+
+## Installation:
+```
+git clone git@github.com:leksandrFo/frontend-project-44.git
+cd frontend-project-44
+make install
+npm link
+```
+## Launch:
+`brain-even`
+`brain-calc`
+`brain-gcd`
+`brain-progression`
+`brain-prime`
+
+## Description:
+<p>"Brain games" - it's a collection of five console games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
   <ul>
     <li>
         <h3>Brain-even</h3>
@@ -26,24 +42,23 @@
     </li>
   </ul>
 
-<h3>Game's demonstration.</h3>
+## Game's demonstration:
+<h3>Brain-even</h3>
 
-<h4>Brain-even</h4>
+[![asciicast](https://asciinema.org/a/547817.svg)](https://asciinema.org/a/547817)
 
-<a href="https://asciinema.org/a/547817" target="_blank"><img src="https://asciinema.org/a/547817.svg" /></a>
+<h3>Brain-calc</h3>
 
-<h4>Brain-calc</h4>
+[![asciicast](https://asciinema.org/a/547823.svg)](https://asciinema.org/a/547823)
 
-<a href="https://asciinema.org/a/547823" target="_blank"><img src="https://asciinema.org/a/547823.svg" /></a>
+<h3>Brain-gcd</h3>
 
-<h4>Brain-gcd</h4>
+[![asciicast](https://asciinema.org/a/547829.svg)](https://asciinema.org/a/547829)
 
-<a href="https://asciinema.org/a/547829" target="_blank"><img src="https://asciinema.org/a/547829.svg" /></a>
+<h3>Brain-progression</h3>
 
-<h4>Brain-gcd</h4>
+[![asciicast](https://asciinema.org/a/547830.svg)](https://asciinema.org/a/547830)
 
-<a href="https://asciinema.org/a/547830" target="_blank"><img src="https://asciinema.org/a/547830.svg" /></a>
+<h3>Brain-prime</h3>
 
-<h4>Brain-gcd</h4>
-
-<a href="https://asciinema.org/a/547831" target="_blank"><img src="https://asciinema.org/a/547831.svg" /></a>
+[![asciicast](https://asciinema.org/a/547831.svg)](https://asciinema.org/a/547831)
