@@ -5,6 +5,9 @@
 
 <p>"Brain games" - it's a collection of five console games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
 
+## Minimum requirements:
+Node.js version 13 or higher.
+
 ## Installation:
 ```
 git clone git@github.com:leksandrFo/frontend-project-44.git
