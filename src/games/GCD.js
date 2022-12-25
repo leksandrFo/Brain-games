@@ -7,10 +7,10 @@ const description = 'Find the greatest common divisor of given numbers.';
 const resultOfExpression = (question) => {
   const arrFromExpression = question.split(' ');
   const [firstNumber, secondNumber] = arrFromExpression;
-  function greatestCommonDivisor (x, y) {
+  function greatestCommonDivisor(x, y) {
     if (!y) return x;
     return greatestCommonDivisor(y, x % y);
-  };
+  }
   return greatestCommonDivisor(firstNumber, secondNumber);
 };
 
