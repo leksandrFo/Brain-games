@@ -20,6 +20,10 @@
         <h3>Brain-progression</h3>
         <p>In the game "Brain-progression" you should insert the missing number into given arithmetic progression.</p>
     </li>
+    <li>
+        <h3>Brain-prime</h3>
+        <p>In the game "Brain-prime" you should answer whether a given number is prime or not.</p>
+    </li>
   </ul>
 
 <h3>Games demonstreation.</h3>
