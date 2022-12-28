@@ -1,9 +1,9 @@
-import generateRandomNumber from '../generateRandomNumber.js';
-import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
+import start from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
   const firstNumber = generateRandomNumber(0, 100);
   const progressionArray = [firstNumber];
   const progressionStep = generateRandomNumber(1, 10);
@@ -18,8 +18,6 @@ const questionAndAnswer = () => {
 };
 
 // Функция прогрессии
-const progression = () => {
-  startGame(description, questionAndAnswer);
+export default () => {
+  start(description, getQuestionAndAnswer);
 };
-
-export default progression;

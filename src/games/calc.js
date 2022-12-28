@@ -1,5 +1,5 @@
-import generateRandomNumber from '../generateRandomNumber.js';
-import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
+import start from '../index.js';
 
 const description = 'What is the result of the expression?';
 const mathSymbols = ['+', '-', '*'];
@@ -7,19 +7,19 @@ const mathSymbols = ['+', '-', '*'];
 const generateRandomMathSymbol = () => mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
 
 // Функция подсчета результата выражения
-const resultOfExpression = (question) => {
-  const arrFromExpression = question.split(' ');
-  const signOfExpression = arrFromExpression[1];
+const getResultOfExpression = (question) => {
+  const getArrFromExpression = question.split(' ');
+  const signOfExpression = getArrFromExpression[1];
   let result = 0;
   switch (signOfExpression) {
     case mathSymbols[0]:
-      result = Number(arrFromExpression[0]) + Number(arrFromExpression[2]);
+      result = Number(getArrFromExpression[0]) + Number(getArrFromExpression[2]);
       break;
     case mathSymbols[1]:
-      result = Number(arrFromExpression[0]) - Number(arrFromExpression[2]);
+      result = Number(getArrFromExpression[0]) - Number(getArrFromExpression[2]);
       break;
     case mathSymbols[2]:
-      result = Number(arrFromExpression[0]) * Number(arrFromExpression[2]);
+      result = Number(getArrFromExpression[0]) * Number(getArrFromExpression[2]);
       break;
     // no default
   }
@@ -27,7 +27,7 @@ const resultOfExpression = (question) => {
 };
 
 // Функция аккумулирования генерации выражения и ответа
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
   const signOfExpression = generateRandomMathSymbol();
   const number = {};
   number.first = generateRandomNumber(0, 100);
@@ -55,13 +55,11 @@ const questionAndAnswer = () => {
       question = `${number.first} ${signOfExpression} ${number.second}`;
     }
   }
-  const answer = String(resultOfExpression(question));
+  const answer = String(getResultOfExpression(question));
   return { question, answer };
 };
 
 // Функция калькулятора
-const calculator = () => {
-  startGame(description, questionAndAnswer);
+export default () => {
+  start(description, getQuestionAndAnswer);
 };
-
-export default calculator;

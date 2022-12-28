@@ -6,21 +6,41 @@
 <p>"Brain games" - it's a collection of five console games in which you should successfully answer the given questions three times using your brain. Good luck!</p>
 
 ## Minimum requirements:
-Node.js version 13 or higher.
+<p>Node.js version 13.2.0 or higher.</p>
 
 ## Installation:
+<p>1. Create clone of the repository.</p>
 ```
 git clone git@github.com:leksandrFo/frontend-project-44.git
+```
+<p>2. Navigate to the repository you just cloned.</p>
+```
 cd frontend-project-44
+```
+<p>3. Installing project dependencies.</p>
+```
 make install
+```
+<p>4. Create a global link.</p>
+```
 npm link
 ```
 ## Launch:
-`brain-even`
-`brain-calc`
-`brain-gcd`
-`brain-progression`
-`brain-prime`
+```
+brain-even
+```
+```
+brain-calc
+```
+```
+brain-gcd
+```
+```
+brain-progression
+```
+```
+brain-prime
+```
 
 ## Description:
   <ul>

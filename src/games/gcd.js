@@ -1,10 +1,10 @@
-import generateRandomNumber from '../generateRandomNumber.js';
-import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
+import start from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 // Функция подсчета результата выражения
-const resultOfExpression = (question) => {
+const getResultOfExpression = (question) => {
   const arrFromExpression = question.split(' ');
   const [firstNumber, secondNumber] = arrFromExpression;
   function greatestCommonDivisor(x, y) {
@@ -15,18 +15,16 @@ const resultOfExpression = (question) => {
 };
 
 // Функция аккумулирования генерации выражения и ответа
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
   const number = {};
   number.first = generateRandomNumber(0, 100);
   number.second = generateRandomNumber(0, 100);
   const question = `${number.first} ${number.second}`;
-  const answer = String(resultOfExpression(question));
+  const answer = String(getResultOfExpression(question));
   return { question, answer };
 };
 
 // Функция калькулятора
-const GCP = () => {
-  startGame(description, questionAndAnswer);
+export default () => {
+  start(description, getQuestionAndAnswer);
 };
-
-export default GCP;
