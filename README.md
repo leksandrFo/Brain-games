@@ -9,22 +9,23 @@
 <p>Node.js version 13.2.0 or higher.</p>
 
 ## Installation:
-<p>1. Create clone of the repository.</p>
+1. Create clone of the repository.
 ```
 git clone git@github.com:leksandrFo/frontend-project-44.git
 ```
-<p>2. Navigate to the repository you just cloned.</p>
+2. Navigate to the repository you just cloned.
 ```
 cd frontend-project-44
 ```
-<p>3. Installing project dependencies.</p>
+3. Installing project dependencies.
 ```
 make install
 ```
-<p>4. Create a global link.</p>
+4. Create a global link.
 ```
 npm link
 ```
+
 ## Launch:
 ```
 brain-even
