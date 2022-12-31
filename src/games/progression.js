@@ -1,4 +1,4 @@
-import generateRandomNumber from '../utils.js';
+import { generateRandomNumber } from '../utils.js';
 import start from '../index.js';
 
 const description = 'What number is missing in the progression?';
@@ -14,7 +14,7 @@ const getQuestionAndAnswer = () => {
   const randomIndex = generateRandomNumber(0, progressionArray.length - 1);
   const answer = String(progressionArray.splice(randomIndex, 1, '..').join());
   const question = progressionArray.join(' ');
-  return { question, answer };
+  return { question, expectedAnswer: answer };
 };
 
 // Функция прогрессии

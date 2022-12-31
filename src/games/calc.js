@@ -1,25 +1,21 @@
-import generateRandomNumber from '../utils.js';
+import { generateRandomNumber, generateRandomIndex } from '../utils.js';
 import start from '../index.js';
 
 const description = 'What is the result of the expression?';
-const mathSymbols = ['+', '-', '*'];
-
-const generateRandomMathSymbol = () => mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+const operators = ['+', '-', '*'];
 
 // Функция подсчета результата выражения
-const getResultOfExpression = (question) => {
-  const getArrFromExpression = question.split(' ');
-  const signOfExpression = getArrFromExpression[1];
+const calculate = (firstOperand, secondOperand, operator) => {
   let result = 0;
-  switch (signOfExpression) {
-    case mathSymbols[0]:
-      result = Number(getArrFromExpression[0]) + Number(getArrFromExpression[2]);
+  switch (operator) {
+    case '+':
+      result = firstOperand + secondOperand;
       break;
-    case mathSymbols[1]:
-      result = Number(getArrFromExpression[0]) - Number(getArrFromExpression[2]);
+    case '-':
+      result = firstOperand - secondOperand;
       break;
-    case mathSymbols[2]:
-      result = Number(getArrFromExpression[0]) * Number(getArrFromExpression[2]);
+    case '*':
+      result = firstOperand * secondOperand;
       break;
     // no default
   }
@@ -28,38 +24,15 @@ const getResultOfExpression = (question) => {
 
 // Функция аккумулирования генерации выражения и ответа
 const getQuestionAndAnswer = () => {
-  const signOfExpression = generateRandomMathSymbol();
-  const number = {};
-  number.first = generateRandomNumber(0, 100);
-  number.second = generateRandomNumber(0, 100);
-  let question = `${number.first} ${signOfExpression} ${number.second}`;
-  if (signOfExpression === '-') { // Условия на вычитание
-    if (number.first === number.second || number.second > number.first) {
-    /* Первое число не должно быть равно нулю и второму числу,
-    а также второе число должно быть меньше первого, чтобы не уходить в отрицательные числа */
-      while (number.first === number.second || number.second > number.first) {
-        number.first = generateRandomNumber(1, 100);
-        number.second = generateRandomNumber(0, 100);
-      }
-      question = `${number.first} ${signOfExpression} ${number.second}`;
-    }
-  }
-  if (signOfExpression === '*') {
-    if (number.first > 10 && number.second > 10) {
-    /* Первое число не должно быть равно нулю, а также одно из чисел не должно быть больше 10
-    для простоты подсчета */
-      while (number.first === 0 || (number.first > 10 && number.second > 10)) {
-        number.first = generateRandomNumber(1, 100);
-        number.second = generateRandomNumber(0, 100);
-      }
-      question = `${number.first} ${signOfExpression} ${number.second}`;
-    }
-  }
-  const answer = String(getResultOfExpression(question));
-  return { question, answer };
+  const operator = generateRandomIndex(operators);
+  const firstOperand = generateRandomNumber(0, 100);
+  const secondOperand = generateRandomNumber(0, 100);
+  const question = `${firstOperand} ${operator} ${secondOperand}`;
+  const answer = String(calculate(firstOperand, secondOperand, operator));
+  return { question, expectedAnswer: answer };
 };
 
-// Функция калькулятора
+// Функция запуска
 export default () => {
   start(description, getQuestionAndAnswer);
 };
