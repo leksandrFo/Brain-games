@@ -16,4 +16,9 @@ const isPrime = (num) => {
   return true;
 };
 
-export { generateRandomNumber, generateRandomIndex, isEven, isPrime };
+export {
+  generateRandomNumber,
+  generateRandomIndex,
+  isEven,
+  isPrime,
+};
