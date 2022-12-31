@@ -1,6 +1,6 @@
 const generateRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
 
-const generateRandomIndex = (array) => array[Math.floor(Math.random() * array.length)];
+const generateRandomIndex = (array) => Math.floor(Math.random() * array.length);
 
 const isEven = (num) => num % 2 === 0;
 

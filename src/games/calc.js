@@ -24,7 +24,7 @@ const calculate = (firstOperand, secondOperand, operator) => {
 
 // Функция аккумулирования генерации выражения и ответа
 const getQuestionAndAnswer = () => {
-  const operator = generateRandomIndex(operators);
+  const operator = operators[generateRandomIndex(operators)];
   const firstOperand = generateRandomNumber(0, 100);
   const secondOperand = generateRandomNumber(0, 100);
   const question = `${firstOperand} ${operator} ${secondOperand}`;
