@@ -3,22 +3,18 @@ import start from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-// Функция подсчета наибольшего делителя
-const getGreatestCommonDivisor = (firstNumber, secondNumber) => {
-  if (!secondNumber) return firstNumber;
-  return getGreatestCommonDivisor(secondNumber, firstNumber % secondNumber);
+const getGcd = (a, b) => {
+  return b === 0 ? a : getGcd(b, a % b);
 };
 
-// Функция аккумулирования генерации выражения и ответа
-const getQuestionAndAnswer = () => {
-  const firstNumber = generateRandomNumber(0, 100);
-  const secondNumber = generateRandomNumber(0, 100);
-  const question = `${firstNumber} ${secondNumber}`;
-  const answer = String(getGreatestCommonDivisor(firstNumber, secondNumber));
+const generateRound = () => {
+  const number1 = generateRandomNumber(0, 100);
+  const number2 = generateRandomNumber(0, 100);
+  const question = `${number1} ${number2}`;
+  const answer = String(getGcd(number1, number2));
   return { question, expectedAnswer: answer };
 };
 
-// Функция запуска
 export default () => {
-  start(description, getQuestionAndAnswer);
+  start(description, generateRound);
 };

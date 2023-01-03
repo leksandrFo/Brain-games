@@ -4,35 +4,29 @@ import start from '../index.js';
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-// Функция подсчета результата выражения
-const calculate = (firstOperand, secondOperand, operator) => {
-  let result = 0;
+const calculate = (a, b, operator) => {
   switch (operator) {
     case '+':
-      result = firstOperand + secondOperand;
-      break;
+      return a + b;
     case '-':
-      result = firstOperand - secondOperand;
-      break;
+      return a - b;
     case '*':
-      result = firstOperand * secondOperand;
-      break;
+      return a * b;
     // no default
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
-  return result;
 };
 
-// Функция аккумулирования генерации выражения и ответа
-const getQuestionAndAnswer = () => {
+const generateRound = () => {
   const operator = operators[generateRandomIndex(operators)];
-  const firstOperand = generateRandomNumber(0, 100);
-  const secondOperand = generateRandomNumber(0, 100);
-  const question = `${firstOperand} ${operator} ${secondOperand}`;
-  const answer = String(calculate(firstOperand, secondOperand, operator));
+  const number1 = generateRandomNumber(0, 100);
+  const number2 = generateRandomNumber(0, 100);
+  const question = `${number1} ${operator} ${number2}`;
+  const answer = String(calculate(number1, number2, operator));
   return { question, expectedAnswer: answer };
 };
 
-// Функция запуска
 export default () => {
-  start(description, getQuestionAndAnswer);
+  start(description, generateRound);
 };
