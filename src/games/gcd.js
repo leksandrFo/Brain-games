@@ -3,9 +3,7 @@ import start from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (a, b) => {
-  return b === 0 ? a : getGcd(b, a % b);
-};
+const getGcd = (a, b) => (b === 0 ? a : getGcd(b, a % b));
 
 const generateRound = () => {
   const number1 = generateRandomNumber(0, 100);

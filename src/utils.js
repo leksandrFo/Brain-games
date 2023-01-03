@@ -5,7 +5,7 @@ const generateRandomIndex = (data) => Math.floor(Math.random() * data.length);
 const isEven = (num) => num % 2 === 0;
 
 const isPrime = (num) => {
-  let limit = Math.sqrt(num);
+  const limit = Math.sqrt(num);
   if (num < 2) {
     return false;
   }
