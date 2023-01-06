@@ -12,7 +12,6 @@ const calculate = (a, b, operator) => {
       return a - b;
     case '*':
       return a * b;
-    // no default
     default:
       throw new Error(`Unknown operator: '${operator}'!`);
   }

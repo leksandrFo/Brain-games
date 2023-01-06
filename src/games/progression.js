@@ -3,16 +3,22 @@ import start from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateRound = () => {
-  const firstNumber = generateRandomNumber(0, 100);
-  const progression = [firstNumber];
-  const progressionStep = generateRandomNumber(1, 10);
-  const progressionLength = generateRandomNumber(5, 10);
-  for (let i = 0; i < progressionLength - 1; i += 1) {
-    progression.push(progression[i] + progressionStep);
+const getProgression = (first, step, length) => {
+  const progression = [];
+  for (let i = 0; i <= length - 1; i += 1) {
+    progression.push(first + step * i);
   }
-  const randomIndex = generateRandomIndex(progression);
-  const answer = String(progression.splice(randomIndex, 1, '..').join());
+  return progression;
+};
+
+const generateRound = () => {
+  const first = generateRandomNumber(0, 100);
+  const step = generateRandomNumber(1, 10);
+  const length = generateRandomNumber(5, 10);
+  const progression = getProgression(first, step, length);
+  const hiddenIndex = generateRandomIndex(progression);
+  const answer = String(progression[hiddenIndex]);
+  progression[hiddenIndex] = '..';
   const question = progression.join(' ');
   return { question, expectedAnswer: answer };
 };
